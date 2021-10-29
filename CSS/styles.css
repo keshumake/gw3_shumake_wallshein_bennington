@@ -1,3 +1,6 @@
+/* font import */
+@import url('https://fonts.googleapis.com/css2?family=Arimo&family=Creepster&display=swap');
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -42,4 +45,26 @@ table {
 	border-spacing: 0;
 }
 
+/* 
+Hex Codes
+Deep red #7C050B
+Light orange #EE7E3C
+Red #D21803
+Black #000000
+Yellow #FDBF0C
+Tan #BD9780
+*/
+
 /* main code */
+
+body {
+	background-color: #000000;
+	font-family: 'Arimo', sans-serif;
+}
+
+.container h1 {
+	font-family: 'Creepster', cursive;
+	color: #bd9790;
+}
+
+
