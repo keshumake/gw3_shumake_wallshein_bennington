@@ -58,13 +58,57 @@ Tan #BD9780
 /* main code */
 
 body {
-	background-color: #000000;
+	background-color: #BD9780;
 	font-family: 'Arimo', sans-serif;
 }
 
-.container h1 {
+#container {
+	display: flex;
+	flex-direction: column;
+}
+
+header, footer {
+	width: 100%;
+	height: 200px;
+	background-color: #EE7E3C;
+}
+
+footer {
+	margin-top: 1em;
+}
+
+#container h2 {
 	font-family: 'Creepster', cursive;
-	color: #bd9790;
+	color: #7C050B;
+	margin: 0 auto;
+	font-size: 3em;
+	letter-spacing: 0.25em;
+	padding: 1em 0;
+}
+
+#gallery {
+	flex: 2;
+	order: 2;
+	display: flex;
+	flex-wrap: wrap;
+	padding: 1rem;
+	justify-content: center;
+	border: 2pt solid #D21803;
+	padding: 1em 0;
+}
+
+#gallery img {
+	margin: 1rem;
+	height: 300px;
 }
 
 
+/* media queries */
+
+@media screen and (min-width: 750px) {
+	#gallery {
+		width: 80%;
+		margin: 0 auto;
+	}
+	
+}
