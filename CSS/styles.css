@@ -57,8 +57,9 @@ body {
 
 /*olivia was here*/
 /* ----------- Main Styles--------------- */
-button.btn{
+button{
 	display: flex;
+	justify-content: center;
   border: none;
   border-radius: 2rem;
   padding: 1rem 3rem;
@@ -70,7 +71,7 @@ button.btn{
 #about {
   display: flex;
   flex-direction: column;
-  background-color: rgb(255, 222, 233);
+  background-color: #000000;
   font-family: 'Creepster', cursive;
   padding: 2%;
   }
@@ -84,7 +85,8 @@ body {
 .warning{
 display:flex;
 }
-/* The sidenav */
+
+/* sidenav */
 .sidenav {
 	height: 100%;
   width: 200px;
@@ -93,13 +95,14 @@ display:flex;
   top: 0;
   left: 0;
   background-color: #111;
+	border-right: #ffffff dotted 2px;
   overflow-x: hidden;
   padding-top: 20px;
 }
 
 /* Page content */
 .main {
-  margin-left: 200px; /* Same as the width of the sidenav */
+  margin-left: 200px;
 }
 
 /* ------------- Header + Nav  --------------- */
@@ -139,7 +142,7 @@ header h1 {
 h2 {
   display: flex;
   justify-content: center;
-  color: rgb(163, 64, 81);
+  color: #EE7E3C;
   font-size: 2em;
   border-bottom: #ffffff dotted 2px;
   line-height: 1.5em;
@@ -159,12 +162,13 @@ h3 {
 p {
   display: flex;
   flex-wrap: wrap;
+	color: #ffffff;
   line-height: 1.25em;
   padding-top: 10px;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
 }
 
-figure .img{
+figure{
   display: flex;
   justify-content: space-around;
 }
@@ -211,7 +215,7 @@ figure {
 	margin:auto;
 }
 
-	main, aside{
+	main{
 		flex: 0 100%;
 		height: 60%;
   }
@@ -229,7 +233,7 @@ footer {
 }
 
 footer h4 {
-  color: red;
+  color: black;
   font-style: italic;
   font-size: 1.15em;
   text-align: center;
