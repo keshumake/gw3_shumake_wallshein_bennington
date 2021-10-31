@@ -57,15 +57,31 @@ body {
 
 /*olivia was here*/
 /* ----------- Main Styles--------------- */
+
+
 button{
-	display: flex;
-	justify-content: center;
+	display: block;
   border: none;
   border-radius: 2rem;
   padding: 1rem 3rem;
   font-size: 1rem;
   font-family: 'Creepster', cursive;
   cursor: pointer;
+}
+main .button{
+  margin: auto;
+  margin-top: 3.5rem;
+  display: flex;
+  justify-content: center;
+  background: red;
+  color: Red;
+}
+
+button:hover{
+  background: red;
+  border: 2px solid green;
+	color: white;
+
 }
 
 #about {
@@ -170,7 +186,18 @@ p {
 
 figure{
   display: flex;
-  justify-content: space-around;
+	align-items: baseline;
+	justify-content: space-around;
+
+}
+
+figcaption{
+	display: flex;
+  flex-wrap: wrap;
+	color: #FDBF0C;
+  line-height: 1.25em;
+  padding-top: 10px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
 }
 
 /* ----------------- Aside -----------------
