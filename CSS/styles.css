@@ -1,3 +1,13 @@
+/*
+Hex Codes
+Deep red #7C050B
+Light orange #EE7E3C
+Red #D21803
+Black #000000
+Yellow #FDBF0C
+Tan #BD9780
+*/
+
 /* font import */
 @import url('https://fonts.googleapis.com/css2?family=Arimo&family=Creepster&display=swap');
 
@@ -33,21 +43,14 @@ table {
 	border-spacing: 0;
 }
 
-/*
-Hex Codes
-Deep red #7C050B
-Light orange #EE7E3C
-Red #D21803
-Black #000000
-Yellow #FDBF0C
-Tan #BD9780
-*/
-
-/* main code */
-
+/* ----------- Main Styles--------------- */
 body {
 	background-color: #000000;
 	font-family: 'Arimo', sans-serif;
+}
+
+main {
+  min-height: 800px;
 }
 
 .container h1 {
@@ -55,33 +58,40 @@ body {
 	color: #bd9790;
 }
 
-/*olivia was here*/
-/* ----------- Main Styles--------------- */
+#warning{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  }
 
-
-button{
-	display: block;
-  border: none;
+.btn {
+  border: 2pt solid #FDBF0C;
   border-radius: 2rem;
   padding: 1rem 3rem;
   font-size: 1rem;
   font-family: 'Creepster', cursive;
   cursor: pointer;
+  color: #000;
 }
-main .button{
+
+.btn a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1.25em;
+  letter-spacing: 0.25em;
+  color: #000;
+}
+
+main .btn {
   margin: auto;
   margin-top: 3.5rem;
-  display: flex;
-  justify-content: center;
-  background: red;
-  color: Red;
+  background-color: #D21803;
 }
 
-button:hover{
-  background: red;
-  border: 2px solid green;
-	color: white;
-
+.btn:hover{
+  background-color: #EE7E3C;
+  border: 2pt solid green;
 }
 
 #about {
@@ -90,60 +100,181 @@ button:hover{
   background-color: #000000;
   font-family: 'Creepster', cursive;
   padding: 2%;
+  margin-left: 5%;
   }
+
+  #about img {
+    height: 500px;
+}
 
 body {
   background-color: rgb(15, 15, 15);
   line-height: 1rem;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Arimo', sans-serif;
 }
 
-.warning{
-display:flex;
+/* ------------- Burger Menu --------------- */
+
+#menu__toggle {
+	opacity: 0;
+  }
+
+  #menu__toggle:checked ~ .menu__btn > span {
+	transform: rotate(45deg);
+  }
+  #menu__toggle:checked ~ .menu__btn > span::before {
+	top: 0;
+	transform: rotate(0);
+  }
+  #menu__toggle:checked ~ .menu__btn > span::after {
+	top: 0;
+	transform: rotate(90deg);
+  }
+  #menu__toggle:checked ~ .menu__box {
+	visibility: visible;
+	left: 0;
+  }
+
+  .menu__btn {
+	display: flex;
+	align-items: center;
+	position: fixed;
+	top: 20px;
+	left: 20px;
+
+	width: 26px;
+	height: 26px;
+
+	cursor: pointer;
+	z-index: 1;
+  }
+
+
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+display: block;
+position: absolute;
+
+width: 100%;
+height: 2px;
+
+background-color: #616161;
+
+transition-duration: .25s;
+}
+.menu__btn > span::before {
+content: '';
+top: -8px;
+}
+.menu__btn > span::after {
+content: '';
+top: 8px;
 }
 
-/* sidenav */
+.menu__box {
+display: block;
+position: fixed;
+visibility: hidden;
+top: 0;
+left: -100%;
+
+width: 15em;
+height: 100%;
+
+margin: 0;
+padding: 80px 0;
+
+list-style: none;
+
+background-color: #BD9780;
+box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+
+transition-duration: .25s;
+}
+
+.menu__item {
+display: block;
+padding: 12px 24px;
+
+color: #FDBF0C;
+
+font-family: 'Roboto', sans-serif;
+font-size: 1em;
+font-weight: 600;
+
+text-decoration: none;
+
+transition-duration: .25s;
+}
+.menu__item:hover {
+background-color: #D21803;
+}
+
+
+
+
+/* ----- sidenav ---- */
 .sidenav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
 	height: 100%;
   width: 200px;
   position: fixed;
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #111;
+  background-color: #000;
 	border-right: #ffffff dotted 2px;
   overflow-x: hidden;
   padding-top: 20px;
 }
 
-/* Page content */
+.sidenav a {
+  color: white;
+  font-family: 'Creepster', cursive;
+  font-size: 1em;
+  letter-spacing: 0.25em;
+  width: 100%;
+  margin-left: 25px;
+}
+
+/* Page content
 .main {
   margin-left: 200px;
 }
 
-/* ------------- Header + Nav  --------------- */
+/* ------------- Header --------------- */
 
 #header {
   margin: 0 auto;
-  background-color: rgb(59, 59, 59);
+  background-color: #000000;
 }
 
+
 header {
-  background-color: rgb(15, 15, 15);
+  background-color: #7C050B;
   height: 150px;
+  /*border-bottom: #ffffff dotted 2px;*/
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0%;
 }
 
 header h1 {
-	display: flex;
-	justify-content: center;
   font-family: 'Creepster', cursive;
   letter-spacing: 0.15em;
   font-size: 3em;
-	border-bottom: #ffffff dotted 2px;
-  color: white;
   font-weight: bold;
+  line-height: normal;
   padding: 20px;
 }
+
 
 /*nav {
   background-color: #ffffff;
@@ -153,16 +284,21 @@ header h1 {
   padding-bottom: 20px;
 }
 
+
+
+
 /* --------------- Main Content Area--------------- */
 
 h2 {
-  display: flex;
-  justify-content: center;
   color: #EE7E3C;
   font-size: 2em;
   border-bottom: #ffffff dotted 2px;
   line-height: 1.5em;
   padding-bottom: 10px;
+  font-family: 'Creepster', cursive;
+  letter-spacing: 0.25em;
+  width: 100%;
+  text-align: center;
 }
 
 h3 {
@@ -181,23 +317,37 @@ p {
 	color: #ffffff;
   line-height: 1.25em;
   padding-top: 10px;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+  font-family: 'Arimo', sans-serif;
 }
 
-figure{
+figure {
   display: flex;
-	align-items: baseline;
-	justify-content: space-around;
-
+  flex-wrap: wrap;
+  color: #ffffff;
+  line-height: 1.25em;
+  padding-top: 10px;
+  font-family: 'Arimo', sans-serif;
+  /*flex-grow: 3;*/
 }
 
 figcaption{
-	display: flex;
-  flex-wrap: wrap;
 	color: #FDBF0C;
   line-height: 1.25em;
   padding-top: 10px;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+  font-family: 'Arimo', sans-serif;
+}
+
+.gallery {
+    margin-left: 200px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.gallery img {
+  height: 300px;
+  padding: 1em 0
 }
 
 /* ----------------- Aside -----------------
@@ -225,7 +375,6 @@ aside h2 {
   text-align: center;
   padding-bottom: 15px;
 }
-*/
 
 figure {
   display: flex;
@@ -247,10 +396,37 @@ figure {
 		height: 60%;
   }
 
+
+/*------------ spinning mask -----------------------*/
+.mask {
+  position: absolute;
+  top: 15px;
+  right: 0px;
+  animation: move 5s infinite linear;
+}
+.mask img:hover {
+  transform: scale(1.75);
+  transition: .5s;
+}
+
+@keyframes move {
+from {
+  transform: rotate(0deg);
+}
+to {
+  transform: rotate(360deg);
+}
+}
+
+
+
+/* ----------------- Galleries  ----------------- */
+
+
 /* ----------------- Footer ----------------- */
 
 footer {
-  display: block;
+  display: flex;
   justify-content: center;
   align-items: center;
   background-color: #EE7E3C;
@@ -267,9 +443,89 @@ footer h4 {
   font-family: 'Creepster', cursive;
 }
 
-/*------------ media queries -----------------------*/
+.fancy_title h1 {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
 
-/*small screen*/
+
+/*------------ media queries -----------------------*/
+@media screen and  (max-width: 480px){
+  .sidenav{
+    display: none;
+    width: 0%;
+}
+figure {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  color: #ffffff;
+  line-height: 1.25em;
+  padding-top: 10px;
+}
+figure img{
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+  }
+
+
+@media screen and  (max-width: 780px){
+  .sidenav{
+    display: none;
+    width: 0%;
+}
+
+  }
+@media screen and  (min-width: 780px){
+  #about {
+    display: flex;
+    flex-direction: column;
+    background-color: #000000;
+    font-family: 'Creepster', cursive;
+    padding: 2%;
+    margin-left: 16%;
+    }
+    header h1 {
+      font-family: 'Creepster', cursive;
+      letter-spacing: 0.15em;
+      font-size: 3em;
+      font-weight: bold;
+      line-height: normal;
+      padding: 20px;
+      margin-left: 175px;
+    }
+}
+
+
+/* keyframes */
+
+body {
+  animation: fadeInAnimation ease 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+@keyframes fadeInAnimation {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+/*  .main {
+    margin-left: 200px;
+  }
+
+
+
+@media screen and  (min-width: 1281px){
+
+
+/*small screen
 @media screen and  (min-width: 320px){
   main {
 			flex: 1 0 0px
@@ -283,7 +539,7 @@ footer h4 {
 	}
   }
 
-/*medium screen*/
+/*medium screen
 @media screen and  (min-width: 720px){
   #about h2 {
     color: rgb(163, 64, 81);
@@ -303,9 +559,28 @@ footer h4 {
 	}
 }
 
-/*desktop*/
+/*desktop
 @media screen and  (min-width: 1280px){
 	body{
 		color: rgb(222, 91, 135);
 	}
 }
+
+
+/* jQuery Footer */
+
+.demo h1 { font-size:72px;  text-transform:uppercase; margin-bottom:0px;}
+        .char1,
+        .line1 { color: #7C050B; }
+        .char2,
+        #demo2 .word2,
+        .line2 { color: #000; }
+        .char3,
+        .word3,
+        .line3 { color: #D21803; }
+        .char4,
+        .line4 { color: #FDBF0C; }
+        .char5 { color: #FFF; }
+        .char6 { color: #7C050B; }
+        .char7 { color: #000; }
+        .char8 { color: #D21803; }
